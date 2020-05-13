@@ -126,8 +126,29 @@
 
 @media (max-width: 960px) {
     :global(.venia-home-slider .slick-slide > div > div > div) {
+        align-content: end;
+        background-position: right center !important;
+        color: white;
+        grid-template-columns: auto;
         padding-left: 1rem !important;
         padding-right: 1rem !important;
+        text-align: center;
+    }
+
+    :global(.venia-home-slider .slick-slide > div > div > div::before) {
+        background-image: linear-gradient(
+            180deg,
+            transparent,
+            rgba(0 0 0 / 0.2),
+            rgba(0 0 0 / 0.6)
+        );
+        content: '';
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
     }
 }
 
